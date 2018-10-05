@@ -27,10 +27,7 @@ SECRET_KEY = 'te3@-)0cmyx&1%#89ecq78@=+r%gwve37r4gwz!3#qsqk0hhse'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '217.79.184.188',
-    'farzcode.ir',
-    'www.farzcode.ir',
-    '*',
+    '*'
 ]
 
 SITE_ID = 1
