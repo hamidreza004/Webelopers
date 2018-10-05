@@ -17,7 +17,7 @@ body {
 hr {
 	  max-width: 50px;
 	    border-width: 3px;
-		  border-color: #00a0d9;
+		  border-color: #a63cff;
 }
 
 hr.light {
@@ -32,7 +32,7 @@ a {
 }
 
 a:hover {
-	    color: #00a0d9;
+	    color: #a63cff;
   }
 
 h1,
@@ -45,7 +45,7 @@ h1,
 	}
 
 .bg-primary {
-	  background-color: #00a0d9 !important;
+	  background-color: #a63cff !important;
 }
 
 .bg-dark {
@@ -98,12 +98,12 @@ img::-moz-selection {
 #mainNav .navbar-brand {
 	  font-weight: 700;
 	    text-transform: uppercase;
-		  color: #00a0d9;
+		  color: #a63cff;
 				   font-family: "Iranian Sans", Halvetica;
 }
 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-	  color: #00a0d9;
+	  color: #a63cff;
 }
 #mainNav .navbar-nav > li.nav-item > a.nav-link,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
@@ -115,12 +115,12 @@ img::-moz-selection {
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-	  color: #00a0d9;
+	  color: #a63cff;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
-	  color: #00a0d9 !important;
+	  color: #a63cff !important;
 			   background-color: transparent;
 }
 
@@ -283,7 +283,7 @@ header.masthead p {
 }
 
 .text-primary {
-	  color: #00a0d9 !important;
+	  color: #a63cff !important;
 }
 
 .btn {
@@ -299,13 +299,13 @@ header.masthead p {
 }
 
 .btn-primary {
-	  background-color: #00a0d9;
-	    border-color: #00a0d9;
+	background-color: #a63cff;
+    border-color: #00a0d9;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
 	  color: #fff;
-			   background-color: #0070d9 !important;
+			   background-color: #a63cff !important;
 }
 
 .btn-primary:active, .btn-primary:focus {

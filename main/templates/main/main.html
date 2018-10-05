@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
     <title> فرزکد -- مسابقه برنامه‌نویسی </title>
-    <link rel="shortcut icon" href="{% static 'main/img/farz_icon.png' %} "/>
+    <link rel="shortcut icon" href="{% static 'main/img/webelopers_icon.png' %} "/>
     <!-- Bootstrap core CSS -->
     <link href="{% static 'main/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
@@ -86,7 +86,7 @@
     </div>
 </header>
 
-<section class="bg-dark text-light" id="about">
+<section class="text-light bg-dark" id="about" style="background-image: url({% static 'main/img/hero-bg.jpg' %})">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center sr-button">
@@ -123,7 +123,7 @@
     </div>
 </section>
 
-<section id="services" dir="ltr" class="bg-light">
+<section id="services" dir="ltr" class="bg-light" >
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -171,7 +171,7 @@
     </div>
 </section>
 
-<section class="text-light" id="register">
+<section class="text-light" id="register" style="background-image: url({% static 'main/img/hero-bg.jpg' %})">
 
     <div class="container text-center">
         <h1 class="mb-1 sr-button"><strong>ثبت‌نام</strong></h1>
@@ -188,11 +188,17 @@
 
 </section>
 
-<section class="text-dark bg-primary" id="register">
+<section class="text-dark bg-light" id="register">
     <div class="container text-center">
         <h1 class="mb-1 sr-button"><strong>زمان را از دست ندهید</strong></h1>
-        </br>
-        <h3>مدت زمان باقی مانده تا مرحله حضوری</h3>
+        <hr>
+        <p>   ثبت‌‌نام : ۱۶مهر - ۱۸مهر </p>
+        <hr>
+        <p>  کارگاه‌ها : ۱۸مهر - ۲۰مهر </p>
+        <hr>
+        <p> مسابقه : ۲۵ و ۲۶ مهرماه</p>
+        <hr>
+        <h3>مدت زمان باقی مانده تا شروع مسابقه</h3>
         </br>
         <div id="countdown" class="col-xs-5 col-sm-6 col-lg-4">
             <div id='tiles'></div>
@@ -208,7 +214,7 @@
 </section>
 
 
-<section class="text-dark bg-light" id="portfolio">
+<section class="text-white bg-dark" id="portfolio" style="background-image: url({% static 'main/img/hero-bg.jpg' %})">
     <div class="container border-left text-left border-secondary">
         <h2 class="mb-4 sr-button"><strong>میخوای اخبار مسابقه رو داشته باشی؟ </strong></h2>
         <a class="btn btn-xl sr-button btn-primary" href="./blog">وارد شو!</a>
@@ -216,13 +222,14 @@
     </div>
     <div class="container border-right text-right border-secondary">
         <h2 class="mb-4 sr-button"><strong>میخوای وارد فضای مسابقه شی؟ </strong></h2>
-        <a class="btn btn-xl sr-button btn-primary" href="http://judge.farzcode.ir">وارد شو!</a>
+        <a class="btn btn-xl sr-button btn-primary" href="/judge">وارد شو!</a>
 
     </div>
 </section>
 
-<section id="contact" class="text-light">
+<section id="contact" class="text-light" >
     <div class="container">
+
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
                 <h2 class="section-heading"><strong>ارتباط بیشتر </strong></h2>
@@ -230,21 +237,72 @@
                 <p class="mb-5">جواب سوالات رو پیدا نکردی؟ با ما ارتباط داشته باش!</p>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-sm-3 mr-auto text-center">
-                <i class="fa fa-envelope-o fa-3x mb-3 sr-button"></i>
-                <p>
-                    <a href="mailto:webelopers@ce.sharif.edu">‌‌‌‌‌‌‌webelopers@ce.sharif.edu</a>
-                </p>
+            <div class="col">
+                <h2 align="middle"> برگزار کننده </h2>
             </div>
-            <div class="col-sm-6 mr-auto text-center">
-                <i class="fa fa-comments fa-3x mb-3 sr-button"></i>
-                <p>
-                    <a href="http://t.me/webelopers">webelopers@</a>
-                </p>
+            <div class="col">
+                <h2 align="middle"> مکان </h2>
             </div>
         </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-5">
+                <a href="http://ssc.ce.sharif.edu">
+                    <img src="{% static 'main/img/SSC.png' %}" width="350">
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <iframe width="350" height="170" align="middle" id="google_maps_iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.9627430847677!2d51.34888151486223!3d35.702534430189345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00a61f30034b%3A0xe59caa3900cd3c54!2sTehran+Province%2C+Tehran%2C+Azadi+St%2C+Dept.+of+Computer+Eng.%2C+Iran!5e0!3m2!1sen!2s!4v1516927405125" style="border: 0" frameborder="0"></iframe>
+                <br>
+                 <p align="left" class="small">خیابان آزادی،دانشگاه صنعتی شریف،دانشکده مهندسی کامپیوتر
+                 </p>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <h2 align="middle"> حامی مالی </h2>
+            </div>
+            <div class="col">
+                <h2 align="middle"> اطلاعات تماس </h2>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://ssc.ce.sharif.edu">
+                    <img src="{% static 'main/img/SSC.png' %}" width="150">
+                </a>
+            </div>
+            <div class="col-sm-7" align="left">
+                <strong>
+                 <p class="small">
+                     ایمیل:
+                     <a href="mailto:webelopers@ce.sharif.edu">‌‌‌‌‌‌‌webelopers@ce.sharif.edu</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <br>
+                    شماره تماس: 5718-6616-021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <br>
+                     تلگرام:
+                     <a href="http://t.me/webelopers">webelopers@</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 </p>
+                </strong>
+            </div>
+        </div>
+
     </div>
+</section>
+
+<section id="credits" class="text-white" style="background-image: url({% static 'main/img/hero-bg.jpg' %})">
+    <div class="container" align="middle">
+         تمامی حقوق برای انجمن علمی دانشکده مهندسی کامپیوتر دانشگاه صنعتی شریف محفوظ است.
+    </div>
+
 </section>
 
 <!-- Bootstrap core JavaScript -->
