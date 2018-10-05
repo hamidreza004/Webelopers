@@ -1,0 +1,83 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="a-form">
+        <div class="container" dir="rtl">
+            {% block alerts %}
+            {% endblock %}
+        </div>
+        <div class="container" dir="rtl">
+            <div class="my-5 row justify-content-center">
+                <div class="col-auto" align="center">
+                    <a href="{% url 'home' %}">
+                        <p><img src="{% static 'main/img/farz.png' %}" width="180" alt="Amoozyar"></p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="my-5 row justify-content-center">
+                <div class="col-11 col-sm-8 col-md-6 col-lg-6 col-xl-4" align="center">
+                    <form class="authentication" method="post" action="/register/">
+                        {{ participants_form.management_form }}
+                        <h3 class="mb-4 cyan">{% block form_title %}{% endblock %}</h3>
+                        {% csrf_token %}
+                        {% for field in team_form %}
+                            <div class="form-group">
+                                {% if field.field.widget.input_type != 'select' %}
+                                    <input style="text-align: center"
+                                           dir="{% if field.field.widget.input_type == 'email' or field.field.widget.input_type == 'password' %}ltr{% else %}rtl{% endif %}"
+                                           type="{{ field.field.widget.input_type }}"
+                                           class="form-control{% if form.non_field_errors or field.errors %} is-invalid {% else %} {% endif %}"
+                                           name="{{ field.name }}" id="{{ field.id_for_label }}"
+                                           {% if field.field.widget.input_type != 'password' and field.value != None %}value="{{ field.value }}"{% endif %}
+                                           placeholder="{{ field.label }}" {% if field.field.widget.attrs.readonly %}
+                                           readonly {% endif %} {% if field.field.required %} required {% endif %}>
+                                {% else %}
+                                    {{ field }}
+                                {% endif %}
+                                <div class="mt-1 text-white text-right">
+                                    {{ field.errors }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="row">
+                            {% for form in participants_form %}
+                                <div class="col-sm-6">
+                                    <h5 style="color: #4fbada;">شرکت‌کننده‌ی {{ forloop.counter }}</h5>
+                                    {% for field in form %}
+                                        <div class="form-group">
+                                            {% if field.field.widget.input_type != 'select' %}
+                                                <input style="text-align: center"
+                                                       dir="{% if field.field.widget.input_type == 'email' or field.field.widget.input_type == 'password' %}ltr{% else %}rtl{% endif %}"
+                                                       type="{{ field.field.widget.input_type }}"
+                                                       class="form-control{% if form.non_field_errors or field.errors %} is-invalid {% else %} {% endif %}"
+                                                       name="{{ field.html_name }}" id="{{ field.id_for_label }}"
+                                                       {% if field.field.widget.input_type != 'password' and field.value != None %}value="{{ field.value }}"{% endif %}
+                                                       placeholder="{{ field.label }}"
+                                                        {% if field.field.widget.attrs.readonly %} readonly {% endif %}
+                                                        {% if field.field.required %} required {% endif %}>
+                                            {% else %}
+                                                {{ field }}
+                                            {% endif %}
+                                            <div class="mt-1 text-white text-right">
+                                                {{ field.errors }}
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                    <!--{{ form }}-->
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="mt-2 text-white text-right">
+                            {{ form.non_field_errors }}
+                        </div>
+                        <button type="submit" class="btn btn-block btn-success">
+                            {% block form_submit %}{% endblock %}</button>
+                    </form>
+                    {% block links %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

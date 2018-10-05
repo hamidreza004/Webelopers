@@ -1,0 +1,27 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container" dir="rtl">
+        <div class="my-5 row justify-content-center">
+            <div class="col-auto" align="center">
+                <a href="{% url 'home' %}">
+                    <p><img src="{% static 'main/img/farz.png' %}" width="180" alt="Amoozyar"></p>
+                </a>
+            </div>
+        </div>
+        <div class="my-5 row justify-content-center">
+            <div class="col-auto" align="center">
+                <h6 style="color: #4fbada;">
+                    {% if status == 1 or status == 0 %}
+                        تیم «{{ team_name }}» با موفّقیّت ثبت شد.
+                    {% elif status == 0 %}
+                        درخواست پرداخت شما در دست بررسی است.
+                    {% else %}
+                        در روند پرداخت مشکلی ایجاد شده است و ثبت تیم {{ team_name }} لغو شده است.
+                    {% endif %}
+                </h6>
+            </div>
+        </div>
+    </div>
+{% endblock %}
