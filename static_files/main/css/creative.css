@@ -9,6 +9,10 @@ body {
 
 }
 
+video::-webkit-media-controls-overlay-play-button {
+  display: none;
+}
+
 hr {
 	  max-width: 50px;
 	    border-width: 3px;
