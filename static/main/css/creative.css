@@ -15,9 +15,9 @@ body {
 }
 
 hr {
-	  max-width: 50px;
-	    border-width: 3px;
-		  border-color: #a63cff;
+    max-width: 50px;
+    border-width: 3px;
+    border-color: #a63cff;
 }
 
 hr.light {
@@ -406,27 +406,27 @@ svg {
 }
 
 .text-copy:nth-child(1){
-	    stroke: #4D163D;
-					animation-delay: -1;
+	    stroke: #5e2897;
+					animation-delay: -1s;
 }
 
 .text-copy:nth-child(2){
-		stroke: #840037;
+		stroke: #a47322;
 					animation-delay: -2s;
 }
 
 .text-copy:nth-child(3){
-		stroke: #BD0034;
+		stroke: #16ca00;
 					animation-delay: -3s;
 }
 
 .text-copy:nth-child(4){
-		stroke: #BD0034;
+		stroke: #5c77bd;
 					animation-delay: -4s;
 }
 
 .text-copy:nth-child(5){
-		stroke: #FDB731;
+		stroke: #fdf8fc;
 					animation-delay: -5s;
 }
 
